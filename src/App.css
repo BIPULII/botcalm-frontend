@@ -2053,3 +2053,523 @@ body {
     font-size: 12px !important;
   }
 }
+
+@media (max-width: 1200px) {
+  .corner-logo {
+    width: 150px;
+    height: 52px;
+  }
+
+  .mascot-wrapper {
+    width: min(320px, 50vw);
+  }
+
+  .main-text {
+    font-size: clamp(24px, 5.5vw, 52px);
+    bottom: 7%;
+  }
+
+  .join-text-box {
+    left: 5vw;
+    top: 250px;
+    width: min(560px, 55vw);
+  }
+
+  .follow-buttons {
+    left: 63%;
+    top: 44%;
+    gap: 22px;
+  }
+
+  .frame-one {
+    width: min(1500px, 88vw);
+    left: 0;
+  }
+
+  .frame-two {
+    top: 860px;
+  }
+
+  .side-text-images {
+    top: 880px;
+  }
+
+  .frame-zero {
+    top: 820px;
+  }
+
+  .how-to-buy-section {
+    margin-top: 320px;
+  }
+
+  .buy-steps-image {
+    width: min(1200px, 88vw);
+    top: 36%;
+  }
+
+  .tokenomics-details-wrap {
+    margin-top: 420px;
+  }
+
+  .tokenomics-cards-img {
+    top: -320px;
+    width: min(1200px, 94vw);
+  }
+
+  .token-tools-section {
+    gap: 42px;
+    padding: 100px 4vw 120px;
+  }
+
+  .metaverse-section {
+    padding: 80px 4vw 110px;
+  }
+
+  .community-section {
+    padding: 80px 4vw 110px;
+  }
+}
+
+@media (max-width: 900px) {
+  .first-page img,
+  .scene-bg,
+  .about-us-image {
+    object-position: center top;
+  }
+
+  .app,
+  .first-page,
+  .snekky-scene,
+  .about-image-page,
+  .join-hero-section,
+  .tokenomics-page,
+  .community-section {
+    min-height: 100svh;
+  }
+
+  .corner-logo {
+    top: 16px;
+    left: 16px;
+    width: 120px;
+    height: 44px;
+    border-radius: 14px;
+  }
+
+  .mascot-wrapper {
+    width: min(280px, 68vw);
+  }
+
+  .click-label {
+    left: 39%;
+    bottom: 12%;
+    font-size: clamp(12px, 3.2vw, 20px);
+  }
+
+  .main-text {
+    bottom: 8%;
+    width: min(92vw, 560px);
+    white-space: normal;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: clamp(20px, 6vw, 38px);
+  }
+
+  .about-image-back-btn {
+    width: 72px;
+    height: 72px;
+    left: 3.5%;
+    bottom: 4.5%;
+  }
+
+  .join-page {
+    min-height: auto;
+  }
+
+  .join-hero-section {
+    height: 100svh;
+  }
+
+  .join-back-btn {
+    top: 20px;
+    left: 20px;
+    width: 62px;
+    height: 62px;
+    font-size: 42px;
+    border-width: 5px;
+  }
+
+  .join-title {
+    top: 24px;
+    width: 90%;
+    white-space: normal;
+    text-align: center;
+    font-size: clamp(30px, 8vw, 56px);
+  }
+
+  .join-text-box {
+    left: 20px;
+    top: 160px;
+    width: calc(100% - 40px);
+  }
+
+  .join-text-box h2 {
+    font-size: clamp(22px, 5.5vw, 34px);
+  }
+
+  .join-text-box p {
+    font-size: clamp(12px, 3.2vw, 16px);
+  }
+
+  .diagonal-band {
+    left: -25%;
+    top: 56%;
+    width: 150%;
+    height: 84px;
+    transform: rotate(-26deg);
+  }
+
+  .band-text {
+    gap: 40px;
+  }
+
+  .band-text span {
+    font-size: clamp(24px, 9vw, 54px);
+  }
+
+  .follow-buttons {
+    left: 50%;
+    top: auto;
+    bottom: 19%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    gap: 14px;
+  }
+
+  .follow-img {
+    width: min(38vw, 190px);
+  }
+
+  .frame-one {
+    width: 130vw;
+    left: 50%;
+    top: -3%;
+    transform: translateX(-50%);
+  }
+
+  .frame-two,
+  .frame-zero,
+  .side-text-images {
+    display: none;
+  }
+
+  .upper-left-image {
+    width: 135vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .center-mascot {
+    width: min(58vw, 320px);
+  }
+
+  .join-yellow-content {
+    min-height: auto;
+  }
+
+  .how-to-buy-section {
+    margin-top: 0;
+    min-height: auto;
+  }
+
+  .how-to-buy-image {
+    min-height: 0;
+  }
+
+  .buy-steps-image {
+    top: 30%;
+    width: 90vw;
+  }
+
+  .tokenomics-link-section {
+    min-height: 200px;
+    padding-bottom: 50px;
+  }
+
+  .tokenomics-link-btn img {
+    width: min(420px, 82vw);
+  }
+
+  .tokenomics-title-img {
+    margin-top: 48px;
+  }
+
+  .tokenomics-details-wrap {
+    margin-top: 320px;
+  }
+
+  .tokenomics-cards-img {
+    top: -260px;
+    width: 94vw;
+  }
+
+  .token-band {
+    height: 52px;
+  }
+
+  .token-band-under-cards {
+    top: -55px;
+  }
+
+  .token-band-bottom {
+    top: -135px;
+  }
+
+  .token-tools-section {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding: 80px 6vw 100px;
+  }
+
+  .token-tool-card {
+    max-width: 520px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  .token-tool-info {
+    min-height: 170px;
+    padding: 28px 20px 22px;
+  }
+
+  .token-tool-info p {
+    margin-bottom: 22px;
+  }
+
+  .metaverse-section {
+    padding: 64px 5vw 88px;
+    gap: 32px;
+  }
+
+  .metaverse-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .metaverse-media-box {
+    height: 260px;
+  }
+
+  .metaverse-info-box {
+    min-height: 0;
+    padding: 30px 20px;
+  }
+
+  .metaverse-info-box p {
+    font-size: clamp(18px, 4vw, 26px);
+  }
+
+  .status-badge {
+    width: 106px;
+    height: 88px;
+    font-size: 12px;
+  }
+
+  .community-section {
+    min-height: auto !important;
+    padding: 70px 5vw 100px !important;
+  }
+
+  .community-title-img {
+    width: min(620px, 90vw);
+  }
+
+  .community-snake-wrap {
+    width: min(260px, 62vw);
+    margin-top: 30px;
+  }
+
+  .community-description {
+    font-size: clamp(13px, 3.4vw, 17px);
+    margin-top: 28px;
+  }
+
+  .community-icons {
+    gap: 22px;
+    margin-top: 26px;
+    flex-wrap: wrap;
+  }
+
+  .community-icons button {
+    width: 52px;
+    height: 52px;
+    font-size: 36px;
+  }
+
+  .faq-btn {
+    width: 180px;
+    height: 56px;
+    font-size: 20px;
+    margin-top: 26px;
+    margin-bottom: 80px !important;
+  }
+
+  .community-footer {
+    font-size: 12px;
+    height: auto;
+    min-height: 42px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .corner-logo {
+    width: 108px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .mascot-wrapper {
+    width: min(72vw, 270px);
+  }
+
+  .click-label {
+    font-size: 11px;
+    bottom: 11%;
+  }
+
+  .main-text {
+    bottom: 9%;
+    width: 92vw;
+    font-size: clamp(18px, 7vw, 30px);
+    letter-spacing: 1px;
+  }
+
+  .join-back-btn {
+    top: 14px;
+    left: 14px;
+    width: 54px;
+    height: 54px;
+    font-size: 36px;
+  }
+
+  .join-title {
+    top: 18px;
+    font-size: clamp(26px, 10vw, 42px);
+  }
+
+  .join-text-box {
+    top: 130px;
+    left: 14px;
+    width: calc(100% - 28px);
+  }
+
+  .join-text-box h2 {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+
+  .diagonal-band {
+    left: -32%;
+    top: 58%;
+    width: 164%;
+    height: 70px;
+  }
+
+  .band-text span {
+    font-size: clamp(20px, 10vw, 42px);
+  }
+
+  .follow-buttons {
+    bottom: 17%;
+    gap: 10px;
+  }
+
+  .follow-img {
+    width: 40vw;
+    max-width: 170px;
+  }
+
+  .upper-left-image {
+    width: 150vw;
+  }
+
+  .center-mascot {
+    width: 66vw;
+  }
+
+  .how-to-buy-section {
+    margin-top: -10px;
+  }
+
+  .buy-steps-image {
+    top: 28%;
+    width: 92vw;
+  }
+
+  .tokenomics-details-wrap {
+    margin-top: 260px;
+  }
+
+  .tokenomics-cards-img {
+    top: -200px;
+    width: 96vw;
+  }
+
+  .tokenomics-link-section {
+    min-height: 170px;
+  }
+
+  .tokenomics-link-btn img {
+    width: 88vw;
+  }
+
+  .token-tool-info p {
+    font-size: 16px;
+  }
+
+  .token-tool-info button {
+    font-size: 15px;
+    padding: 6px 24px;
+  }
+
+  .metaverse-media-box {
+    height: 210px;
+  }
+
+  .metaverse-info-box h2 {
+    font-size: 28px;
+  }
+
+  .metaverse-info-box p {
+    font-size: 18px;
+  }
+
+  .community-section {
+    padding: 60px 4vw 90px !important;
+  }
+
+  .community-title-img {
+    width: 94vw;
+  }
+
+  .community-snake-wrap {
+    width: 72vw;
+  }
+
+  .community-description {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .community-icons button {
+    width: 46px;
+    height: 46px;
+    font-size: 32px;
+  }
+
+  .faq-btn {
+    width: 160px;
+    height: 52px;
+    font-size: 18px;
+  }
+}
