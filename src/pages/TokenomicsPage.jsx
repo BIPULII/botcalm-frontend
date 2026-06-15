@@ -4,6 +4,10 @@ import tokenBand1 from "../assets/token-band-1.png";
 import tokenBand2 from "../assets/token-band-2.png";
 import tokenomicsCards from "../assets/tokenomics-cards.png";
 
+import aiCreator from "../assets/ai-creator.png";
+import ethStaking from "../assets/eth-staking.png";
+import missionSolana from "../assets/mission-solana.png";
+
 function TokenomicsPage({ onBack }) {
   return (
     <main className="tokenomics-page">
@@ -44,6 +48,46 @@ function TokenomicsPage({ onBack }) {
           className="tokenomics-cards-img"
         />
       </div>
+
+      <section className="token-tools-section">
+        <div className="token-tool-card">
+          <div className="token-tool-img-box">
+            <img src={aiCreator} alt="AI Creator" />
+            <span className="tool-badge">AI<br />CREATOR</span>
+          </div>
+
+          <div className="token-tool-info">
+            <p>
+              Imagine any scene of Snekky Mars to help him explore the vast univers...
+            </p>
+            <button>TRY IT OUT</button>
+          </div>
+        </div>
+
+        <div className="token-tool-card">
+          <div className="token-tool-img-box">
+            <img src={ethStaking} alt="ETH Staking" />
+          </div>
+
+          <div className="token-tool-info">
+            <p>Stake your ETH to earn more</p>
+            <button>GET STARTED</button>
+          </div>
+        </div>
+
+        <div className="token-tool-card">
+          <div className="token-tool-img-box">
+            <img src={missionSolana} alt="Mission Solana" />
+          </div>
+
+          <div className="token-tool-info">
+            <p>
+              Bridge your $ELON tokens to and from the Solana blockchain
+            </p>
+            <button>GET STARTED</button>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

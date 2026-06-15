@@ -1137,96 +1137,53 @@ body {
 }
 
 .tokenomics-title-img {
-  position: absolute;
-  top: 70px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  display: block;
+  margin: 70px auto 0;
   width: min(560px, 82vw);
   height: auto;
+  z-index: 20;
   animation: tokenomicsTitleEnter 0.9s ease 0.2s both;
 }
 
-.tokenomics-content {
-  width: 100%;
-  min-height: 100vh;
-  padding-top: 220px;
-}
-
-.tokenomics-back-btn {
-  position: fixed;
-  top: 45px;
-  left: 45px;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  border: 7px solid #7a4b00;
-  background: #c8941b;
-  color: white;
-  font-size: 54px;
-  z-index: 20;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 8px;
-}
-
-.tokenomics-back-btn:hover {
-  transform: scale(1.1);
-}
-
-@keyframes tokenomicsPageEnter {
-  from {
-    opacity: 0;
-    transform: scale(1.03);
-    filter: blur(5px);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-    filter: blur(0);
-  }
-}
-
-@keyframes tokenomicsTitleEnter {
-  from {
-    opacity: 0;
-    transform: translateX(-50%) translateY(-35px) scale(0.9);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0) scale(1);
-  }
-}
+/* IMPORTANT: make this relative, not absolute */
 .tokenomics-details-wrap {
-  position: absolute;
-  top: 760px;
-  left: 0;
+  position: relative;
   width: 100vw;
-  height: auto;
-  z-index: 2;
+  margin-top: 560px;
   overflow: visible;
+  z-index: 2;
 
   animation:
     tokenomicsDetailsEnterFull 0.9s ease 0.35s both,
     tokenomicsDetailsFloatFull 4s ease-in-out 1.4s infinite;
 }
+
 .tokenomics-details-img {
+  width: 100vw;
+  max-width: none;
+  height: auto;
+  display: block;
   position: relative;
   z-index: 1;
 }
 
-.token-band-under-cards {
-  top: -85px;
-  z-index: 10;
+/* Cards stay above bands */
+.tokenomics-cards-img {
+  position: absolute;
+  left: 50%;
+  top: -420px;
+  transform: translateX(-50%);
+  width: min(1420px, 92vw);
+  height: auto;
+  z-index: 50;
+
+  animation:
+    tokenCardsEnter 0.9s ease 0.45s both,
+    tokenCardsFloat 4s ease-in-out 1.5s infinite;
 }
 
-.token-band-bottom {
-  top: 250px;
-  z-index: 10;
-}
+/* Bands stay under cards */
 .token-band {
   position: absolute;
   left: 0;
@@ -1234,9 +1191,51 @@ body {
   height: clamp(42px, 5.8vw, 92px);
   background: #aa8508;
   overflow: hidden;
-  z-index: 5;
   pointer-events: none;
+  z-index: 10;
 }
+
+.token-band-under-cards {
+  top: -85px;
+}
+
+.token-band-bottom {
+  top: -190px;
+}
+
+.token-band-track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+}
+
+.token-band-track img {
+  height: 100%;
+  width: auto;
+  max-width: none;
+  flex-shrink: 0;
+}
+
+.move-left {
+  animation: tokenBandMoveLeft 28s linear infinite;
+}
+
+.move-right {
+  animation: tokenBandMoveRight 28s linear infinite;
+}
+
+/* This section will now appear AFTER tokenomics-details */
+.token-tools-section {
+  width: 100%;
+  background: #000;
+  padding: 120px 5vw 150px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  position: relative;
+  z-index: 10;
+}
+
 
 /* upper band on black background */
 .token-band-black {
@@ -1329,5 +1328,245 @@ body {
 
   100% {
     transform: translateX(-50%) translateY(0);
+  }
+}
+.token-tools-section {
+  width: 100%;
+  background: #000;
+  padding: 120px 5vw 150px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  position: relative;
+  z-index: 10;
+} */
+
+/* .token-tool-card {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  animation:
+    tokenToolEnter 0.9s ease both,
+    tokenToolFloat 4s ease-in-out 1.2s infinite;
+}
+
+.token-tool-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.token-tool-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.token-tool-img-box {
+  width: 100%;
+  aspect-ratio: 1 / 1.16;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  background: #111;
+}
+
+.token-tool-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+.token-tool-card {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  animation: tokenToolEnter 0.9s ease both;
+}
+
+.token-tool-img-box {
+  width: 100%;
+  aspect-ratio: 1 / 1.16;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  background: #111;
+
+  animation: imageBoxFloat 4s ease-in-out infinite;
+}
+
+.token-tool-card:nth-child(2) .token-tool-img-box {
+  animation-delay: 0.4s;
+}
+
+.token-tool-card:nth-child(3) .token-tool-img-box {
+  animation-delay: 0.8s;
+}
+
+.token-tool-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease, filter 0.45s ease;
+
+  animation: imageInnerMove 5s ease-in-out infinite;
+}
+
+.token-tool-card:nth-child(2) .token-tool-img-box img {
+  animation-delay: 0.35s;
+}
+
+.token-tool-card:nth-child(3) .token-tool-img-box img {
+  animation-delay: 0.7s;
+}
+
+.token-tool-img-box:hover img {
+  transform: scale(1.08) rotate(1deg);
+  filter: brightness(1.08);
+}
+@keyframes imageBoxFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(0.8deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes imageInnerMove {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+
+  50% {
+    transform: scale(1.04) translateY(-6px);
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+.tool-badge {
+  position: absolute;
+  left: 7%;
+  bottom: 7%;
+  width: 145px;
+  height: 125px;
+  background: #000;
+  color: #fff;
+  font-family: "Kalam", cursive;
+  font-size: clamp(18px, 1.5vw, 28px);
+  font-weight: 700;
+  line-height: 1.35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  clip-path: polygon(
+    50% 0%,
+    60% 18%,
+    78% 8%,
+    74% 30%,
+    100% 28%,
+    82% 48%,
+    100% 68%,
+    74% 66%,
+    78% 92%,
+    58% 78%,
+    50% 100%,
+    40% 80%,
+    22% 92%,
+    26% 68%,
+    0% 70%,
+    18% 50%,
+    0% 32%,
+    26% 30%,
+    22% 8%,
+    40% 18%
+  );
+}
+
+.token-tool-info {
+  width: 100%;
+  min-height: 210px;
+  background: linear-gradient(180deg, #5b2d00 0%, #bd6500 100%);
+  border-radius: 14px;
+  padding: 38px 28px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.token-tool-info p {
+  font-family: "Kalam", cursive;
+  font-size: clamp(18px, 1.5vw, 28px);
+  font-weight: 700;
+  line-height: 1.45;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.token-tool-info button {
+  border: 3px solid #241500;
+  background: #b58a12;
+  color: #fff;
+  font-family: "Kalam", cursive;
+  font-size: clamp(16px, 1.25vw, 24px);
+  font-weight: 700;
+  border-radius: 16px;
+  padding: 6px 34px;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.token-tool-info button:hover {
+  transform: scale(1.08);
+  background: #d49d18;
+}
+
+@keyframes tokenToolEnter {
+  from {
+    opacity: 0;
+    transform: translateY(45px) scale(0.96);
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes tokenToolFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+@media (max-width: 900px) {
+  .token-tools-section {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 90px 8vw 120px;
+  }
+
+  .token-tool-card {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .token-tool-info {
+    min-height: 190px;
   }
 }
