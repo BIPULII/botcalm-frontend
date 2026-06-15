@@ -1214,11 +1214,18 @@ body {
     tokenomicsDetailsFloatFull 4s ease-in-out 1.4s infinite;
 }
 .tokenomics-details-img {
-  width: 100vw;
-  max-width: none;
-  height: auto;
-  display: block;
-  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.token-band-under-cards {
+  top: -85px;
+  z-index: 10;
+}
+
+.token-band-bottom {
+  top: 250px;
+  z-index: 10;
 }
 .token-band {
   position: absolute;
@@ -1233,13 +1240,13 @@ body {
 
 /* upper band on black background */
 .token-band-black {
-  top: 580px;
+  top: 680px;
   z-index: 4;
 }
 
 /* lower band on tokenomics-details image */
 .token-band-bottom {
-  top: -80px;
+  top: -190px;
   z-index: 6;
 }
 
@@ -1281,5 +1288,46 @@ body {
 
   to {
     transform: translateX(0);
+  }
+}
+.tokenomics-cards-img {
+  position: absolute;
+  left: 50%;
+  top: -420px;
+  transform: translateX(-50%);
+  width: min(1420px, 92vw);
+  height: auto;
+  z-index: 50;
+
+
+  animation:
+    tokenCardsEnter 0.9s ease 0.45s both,
+    tokenCardsFloat 4s ease-in-out 1.5s infinite;
+}
+@keyframes tokenCardsEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(45px) scale(0.96);
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes tokenCardsFloat {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-8px);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(0);
   }
 }
