@@ -9,6 +9,7 @@ import ethStaking from "../assets/eth-staking.png";
 import missionSolana from "../assets/mission-solana.png";
 import metaverseVideo from "../assets/metaverse-video.mp4";
 import rufusImage from "../assets/rufus-l2.png";
+import CommunitySection from "./CommunitySection";
 
 function TokenomicsPage({ onBack }) {
   return (
@@ -135,6 +136,7 @@ function TokenomicsPage({ onBack }) {
     </div>
   </div>
 </section>
+<CommunitySection />
     </main>
   );
 }
