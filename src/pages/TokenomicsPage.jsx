@@ -7,6 +7,8 @@ import tokenomicsCards from "../assets/tokenomics-cards.png";
 import aiCreator from "../assets/ai-creator.png";
 import ethStaking from "../assets/eth-staking.png";
 import missionSolana from "../assets/mission-solana.png";
+import metaverseVideo from "../assets/metaverse-video.mp4";
+import rufusImage from "../assets/rufus-l2.png";
 
 function TokenomicsPage({ onBack }) {
   return (
@@ -88,6 +90,51 @@ function TokenomicsPage({ onBack }) {
           </div>
         </div>
       </section>
+      <section className="metaverse-section">
+  <div className="metaverse-row">
+    <div className="metaverse-media-box">
+      <video
+        src={metaverseVideo}
+        className="metaverse-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+      ></video>
+
+      <span className="status-badge coming-soon">COMING SOON</span>
+    </div>
+
+    <div className="metaverse-info-box">
+      <h2>SNEKKY METAVERSE</h2>
+
+      <p>
+        Stake your $ELON tokens to get land on Mars. Build and earn while
+        playing the online multiplayer mission with friends.
+      </p>
+
+      <button>LEARN MORE</button>
+    </div>
+  </div>
+
+  <div className="metaverse-row">
+    <div className="metaverse-media-box">
+      <img src={rufusImage} alt="Rufus L2" />
+
+      <span className="status-badge now-live">NOW LIVE</span>
+    </div>
+
+    <div className="metaverse-info-box">
+      <h2>RUFUS L2</h2>
+
+      <p>
+        Rufus Testnet, an Arbitrum Nitro L2 blockchain, is in beta.
+      </p>
+
+      <button>LEARN MORE</button>
+    </div>
+  </div>
+</section>
     </main>
   );
 }
