@@ -1035,3 +1035,50 @@ body {
     transform: translateY(0);
   }
 }
+
+.how-to-buy-section {
+  width: 100%;
+  min-height: 120vh;
+  background: #eac51f;
+  position: relative;
+  overflow: hidden;
+  margin-top: 420px;
+  animation: howToBuyEnter 0.9s ease both;
+}
+
+.how-to-buy-image {
+  width: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* New steps image */
+.buy-steps-image {
+  position: absolute;
+  left: 50%;
+  top: 34%;
+  width: min(1450px, 92vw);
+  height: auto;
+  transform: translateX(-50%);
+  z-index: 3;
+
+  animation:
+    buyStepsEnter 0.9s ease 0.35s both,
+    buyStepsFloat 4s ease-in-out 1.4s infinite;
+}
+
+@keyframes howToBuyEnter {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+  
+}

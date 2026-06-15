@@ -7,6 +7,9 @@ import frame1 from "../assets/fram1.png";
 import frame2 from "../assets/fram2.png";
 import snekkyText from "../assets/SNEKKY.png";
 import mediaText from "../assets/MEDIA.png";
+import howToBuy from "../assets/HowToBuy.png";
+import buySteps from "../assets/buySteps.png";
+
 function JoinPage({ onBack }) {
   return (
     <section className="join-page">
@@ -60,6 +63,19 @@ function JoinPage({ onBack }) {
 
       <section className="join-yellow-content">
         {/* next parts add here */}
+        <section className="how-to-buy-section">
+  <img
+    src={howToBuy}
+    alt="How to Buy"
+    className="how-to-buy-image"
+  />
+
+  <img
+    src={buySteps}
+    alt="How to buy steps"
+    className="buy-steps-image"
+  />
+</section>
       </section>
     </section>
   );
