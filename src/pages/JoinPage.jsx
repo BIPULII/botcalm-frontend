@@ -9,8 +9,9 @@ import snekkyText from "../assets/SNEKKY.png";
 import mediaText from "../assets/MEDIA.png";
 import howToBuy from "../assets/HowToBuy.png";
 import buySteps from "../assets/buySteps.png";
+import tokenomics from "../assets/tokenomics.png";
 
-function JoinPage({ onBack }) {
+function JoinPage({ onBack , onTokenomicsClick}) {
   return (
     <section className="join-page">
       <section className="join-first-section">
@@ -75,6 +76,11 @@ function JoinPage({ onBack }) {
     alt="How to buy steps"
     className="buy-steps-image"
   />
+  <section className="tokenomics-link-section">
+  <button className="tokenomics-link-btn" onClick={onTokenomicsClick}>
+    <img src={tokenomics} alt="Tokenomics" />
+  </button>
+</section>
 </section>
       </section>
     </section>

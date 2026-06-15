@@ -1080,5 +1080,123 @@ body {
     transform: translateY(0);
     filter: blur(0);
   }
+
   
+  
+}
+.tokenomics-link-section {
+  width: 100%;
+  min-height: 260px;
+  background: #eac51f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+
+.tokenomics-link-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s ease;
+  animation: tokenomicsButtonFloat 3.5s ease-in-out infinite;
+}
+
+.tokenomics-link-btn img {
+  width: min(520px, 80vw);
+  height: auto;
+  display: block;
+}
+
+.tokenomics-link-btn:hover {
+  transform: scale(1.08);
+}
+
+@keyframes tokenomicsButtonFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+.tokenomics-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  position: relative;
+  overflow-x: hidden;
+  color: white;
+  animation: tokenomicsPageEnter 0.8s ease both;
+}
+
+.tokenomics-title-img {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(560px, 82vw);
+  height: auto;
+  animation: tokenomicsTitleEnter 0.9s ease 0.2s both;
+}
+
+.tokenomics-content {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 220px;
+}
+
+.tokenomics-back-btn {
+  position: fixed;
+  top: 45px;
+  left: 45px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 7px solid #7a4b00;
+  background: #c8941b;
+  color: white;
+  font-size: 54px;
+  z-index: 20;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+.tokenomics-back-btn:hover {
+  transform: scale(1.1);
+}
+
+@keyframes tokenomicsPageEnter {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes tokenomicsTitleEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-35px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
 }

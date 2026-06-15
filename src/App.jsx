@@ -7,6 +7,7 @@ import mascot from "./assets/mascot.png";
 import snekkyLogo from "./assets/snekky-logo.png";
 import aboutUs from "./assets/aboutus.png";
 import JoinPage from "./pages/JoinPage";
+import TokenomicsPage from "./pages/TokenomicsPage";
 
 function App() {
   const [showSnekky, setShowSnekky] = useState(false);
@@ -54,10 +55,10 @@ function App() {
           <img src={snekkyBg} alt="Snekky Background" className="scene-bg" />
 
           <button
-  type="button"
-  className="mascot-wrapper mascot-clickable"
-  onClick={() => setPage("join")}
->
+            type="button"
+            className="mascot-wrapper mascot-clickable"
+            onClick={() => setPage("join")}
+          >
   <img src={mascot} alt="Snekky Mascot" className="mascot" />
   <span className="click-label">Click Here</span>
 </button>
@@ -78,7 +79,13 @@ function App() {
   </section>
 )}
 {showSnekky && page === "join" && (
-  <JoinPage onBack={() => setPage("home")} />
+  <JoinPage
+    onBack={() => setPage("home")}
+    onTokenomicsClick={() => setPage("tokenomics")}
+  />
+)}
+{showSnekky && page === "tokenomics" && (
+  <TokenomicsPage onBack={() => setPage("join")} />
 )}
     </main>
   );
