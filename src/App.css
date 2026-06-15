@@ -1200,3 +1200,86 @@ body {
     transform: translateX(-50%) translateY(0) scale(1);
   }
 }
+.tokenomics-details-wrap {
+  position: absolute;
+  top: 760px;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  z-index: 2;
+  overflow: visible;
+
+  animation:
+    tokenomicsDetailsEnterFull 0.9s ease 0.35s both,
+    tokenomicsDetailsFloatFull 4s ease-in-out 1.4s infinite;
+}
+.tokenomics-details-img {
+  width: 100vw;
+  max-width: none;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.token-band {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: clamp(42px, 5.8vw, 92px);
+  background: #aa8508;
+  overflow: hidden;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* upper band on black background */
+.token-band-black {
+  top: 580px;
+  z-index: 4;
+}
+
+/* lower band on tokenomics-details image */
+.token-band-bottom {
+  top: -80px;
+  z-index: 6;
+}
+
+.token-band-track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+}
+
+.token-band-track img {
+  height: 100%;
+  width: auto;
+  max-width: none;
+  flex-shrink: 0;
+}
+
+.move-left {
+  animation: tokenBandMoveLeft 28s linear infinite;
+}
+
+.move-right {
+  animation: tokenBandMoveRight 28s linear infinite;
+}
+
+@keyframes tokenBandMoveLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes tokenBandMoveRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
